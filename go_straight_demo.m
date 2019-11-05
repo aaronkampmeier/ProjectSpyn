@@ -1,20 +1,20 @@
 %% Go Straight Open-Loop Template %%
 
 % Copyright 2014 The MathWorks, Inc.
-
+ConnectToBrick;
 
 %% Set up %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %------- Change ME -------------------------
 % Change based on your communication setting
-mylego = legoev3;                           % Set up MATLAB and EV3 communication
+mylego = legoBrick;                           % Set up MATLAB and EV3 communication
 
 % Change based on your motor port numbers
 mymotor1 = motor(mylego, 'A');              % Set up motor
 mymotor2 = motor(mylego, 'B');              
 
 % Application parameters
-EXE_TIME = 5;                              % Application running time in seconds
+EXE_TIME = 2;                              % Application running time in seconds
 SPEED = 100;                                 % Motor speed
 %-------------------------------------------
 
@@ -33,4 +33,3 @@ pause(EXE_TIME);                            % Wait
 stop(mymotor1);                             % Stop motor 
 stop(mymotor2);
 
-clear
