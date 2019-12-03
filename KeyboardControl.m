@@ -1,10 +1,10 @@
 global key
 InitKeyboard();
 
-SPEED = 100;
+SPEED = 50;
 
 while 1
-    %pause(0.1);
+    pause(0.1);
     display(key);
    switch key
        case 'uparrow'
@@ -26,10 +26,9 @@ while 1
            break;
    end
    
-   if brick.TouchPressed(1) == 1
+   if brick.TouchPressed(TOUCH_PORT) == 1
         brick.playTone(100,300,500);
    end
-   
 end
 
 CloseKeyboard();
